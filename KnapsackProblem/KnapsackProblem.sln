@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnapsackProblem", "KnapsackProblem\KnapsackProblem.csproj", "{E9A3B7EF-2AAF-4ABB-A5B0-40C374A35E8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnapsackProblem.Tests", "KnapsackProblem.Tests\KnapsackProblem.Tests.csproj", "{B58AEF00-A34D-4D86-B5FB-753FA1EE8416}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnapsackProblem.UI", "KnapsackProblem.UI\KnapsackProblem.UI.csproj", "{6E5F95C8-92B3-4E22-90F0-525BC2B31976}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{E9A3B7EF-2AAF-4ABB-A5B0-40C374A35E8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9A3B7EF-2AAF-4ABB-A5B0-40C374A35E8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9A3B7EF-2AAF-4ABB-A5B0-40C374A35E8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B58AEF00-A34D-4D86-B5FB-753FA1EE8416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B58AEF00-A34D-4D86-B5FB-753FA1EE8416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B58AEF00-A34D-4D86-B5FB-753FA1EE8416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B58AEF00-A34D-4D86-B5FB-753FA1EE8416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E5F95C8-92B3-4E22-90F0-525BC2B31976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E5F95C8-92B3-4E22-90F0-525BC2B31976}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E5F95C8-92B3-4E22-90F0-525BC2B31976}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E5F95C8-92B3-4E22-90F0-525BC2B31976}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
