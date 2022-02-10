@@ -7,9 +7,6 @@ namespace KnapsackProblem.Tests;
 [TestFixture]
 public class KnapsackTests
 {
-// - { Name = "Radio", Price = 3000, Weight = 4 },
-// - { Name = "Laptop", Price = 2000, Weight = 3 },
-// - { Name = "Guitar", Price = 1500, Weight = 1 }
     [Test]
     public void SimpleTest()
     {
@@ -18,6 +15,7 @@ public class KnapsackTests
             new Product {Title = "Radio", Price = 3000, Weight = 4},
             new Product {Title = "Laptop", Price = 2000, Weight = 3},
             new Product {Title = "Guitar", Price = 1500, Weight = 1},
+            new Product {Title = "Iphone", Price = 4000, Weight = 1},
         };
         const int size = 4;
         var expected = new[]
@@ -26,7 +24,7 @@ public class KnapsackTests
             new Product {Title = "Guitar", Price = 1500, Weight = 1},
         };
 
-        var optimal = new KnapsackSolver().GetOptimalProducts(products, size);
+        var optimal = KnapsackSolver.GetOptimalProducts(products, size);
 
         optimal.SequenceEqual(expected).Should().BeTrue();
     }

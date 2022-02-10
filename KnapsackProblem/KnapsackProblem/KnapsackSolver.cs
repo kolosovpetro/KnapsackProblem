@@ -1,10 +1,10 @@
 ﻿namespace KnapsackProblem;
 
-public class KnapsackSolver
+public static class KnapsackSolver
 {
-    public IEnumerable<Product> GetOptimalProducts(IEnumerable<Product> products, int knapsackSize)
+    public static IEnumerable<Product> GetOptimalProducts(IEnumerable<Product> products, int knapsackSize)
     {
-        var productsArray = products.OrderBy(x => x.Weight).ToArray();
+        var productsArray = products.OrderBy(x => x.Price).ToArray();
         var productArrayLength = productsArray.Length;
 
         var jaggedArray = GenerateJaggedArray(knapsackSize, productArrayLength);
@@ -14,7 +14,9 @@ public class KnapsackSolver
             for (var column = 0; column < knapsackSize; column++)
             {
                 var product = productsArray[row];
+
                 var previousMaxIndex = row - 1;
+
                 var previousMax = GetElement(jaggedArray, previousMaxIndex, column);
 
                 if (product.Weight > column + 1)
@@ -25,7 +27,7 @@ public class KnapsackSolver
 
                 var remainingRow = row - 1;
                 var remainingColumn = column - product.Weight;
-                
+
                 var remainingWeight = GetElement(jaggedArray, remainingRow, remainingColumn);
                 var currentPrice = product.Price + remainingWeight;
 
