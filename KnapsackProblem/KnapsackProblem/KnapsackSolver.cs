@@ -1,15 +1,19 @@
-﻿namespace KnapsackProblem;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace KnapsackProblem;
 
 public static class KnapsackSolver
 {
-    public static IEnumerable<Product> GetOptimalProducts(IEnumerable<Product> products, int knapsackSize)
+    public static int GetOptimalProducts(IEnumerable<Product> products, int knapsackSize)
     {
         var productsArray = products.OrderBy(x => x.Price).ToArray();
-        var productArrayLength = productsArray.Length;
+        var productsCount = productsArray.Length;
 
-        var jaggedArray = GenerateJaggedArray(knapsackSize, productArrayLength);
+        var jaggedArray = GenerateJaggedArray(knapsackSize, productsCount);
 
-        for (var row = 0; row < productArrayLength; row++)
+        for (var row = 0; row < productsCount; row++)
         {
             for (var column = 0; column < knapsackSize; column++)
             {
@@ -36,8 +40,10 @@ public static class KnapsackSolver
                 jaggedArray[row][column] = result;
             }
         }
+        
+        var max = jaggedArray[productsCount - 1][knapsackSize - 1];
 
-        throw new NotImplementedException();
+        return max;
     }
 
     private static int[][] GenerateJaggedArray(int knapsackSize, int productsCount)
